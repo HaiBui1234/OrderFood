@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".allFragment.FeedbackFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6sp"
+        android:textSize="16sp"
+        android:text="Họ và tên(*)"/>
+    <EditText
+        android:id="@+id/HotenF"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Họ và tên..."
+        android:layout_margin="6sp"
+        android:padding="8sp"
+        android:background="@drawable/border_ed"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6sp"
+        android:textSize="16sp"
+        android:text="Số điện thoại(*)"/>
+    <EditText
+        android:id="@+id/sdtF"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Số điện thoại..."
+        android:layout_margin="6sp"
+        android:inputType="number"
+        android:padding="8sp"
+        android:background="@drawable/border_ed"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6sp"
+        android:textSize="16sp"
+        android:text="Email(*)"/>
+    <EditText
+        android:id="@+id/emailF"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Email..."
+        android:layout_margin="6sp"
+        android:enabled="false"
+        android:padding="8sp"
+        android:background="@drawable/border_ed"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="6sp"
+        android:textSize="16sp"
+        android:text="Bình luận(*)"/>
+    <EditText
+        android:id="@+id/commentF"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:hint="Bình luận..."
+        android:gravity="start"
+        android:layout_margin="6sp"
+        android:padding="8sp"
+        android:background="@drawable/border_ed"/>
+    <Button
+        android:id="@+id/btnSend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gửi phản hồi"
+        android:layout_margin="10sp"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:background="@drawable/border_btn"/>
+</LinearLayout>

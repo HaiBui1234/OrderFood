@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="5sp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:text="Chi tiết đơn hàng"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/tvMoneyBill"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text="200000"
+            android:textSize="20sp"
+            android:gravity="end"
+            android:textColor="@color/red"
+            android:textStyle="bold"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tvproductBill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="sdadcac"
+        android:textSize="18sp"
+        android:layout_margin="5sp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5sp"
+        android:textSize="16sp"
+        android:text="Phương thức thanh toán(*)"/>
+    <EditText
+        android:id="@+id/edtTT"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:autofillHints="Phương thức thanh toán..."
+        android:hint="Phương thức thanh toán..."
+        android:layout_margin="5sp"
+        android:padding="8sp"
+        android:background="@drawable/border_ed"
+        android:inputType="text" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5sp"
+        android:textSize="16sp"
+        android:text="Họ và tên(*)"/>
+    <EditText
+        android:id="@+id/nameUser"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Họ tên..."
+        android:autofillHints="Tên..."
+        android:layout_margin="5sp"
+        android:padding="8sp"
+        android:background="@drawable/border_ed"
+        android:inputType="text" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5sp"
+        android:textSize="16sp"
+        android:text="Số điện thoại(*)"/>
+    <EditText
+        android:id="@+id/edtNumberP"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Sô điện thoại..."
+        android:autofillHints="Tên..."
+        android:layout_margin="5sp"
+        android:padding="8sp"
+        android:background="@drawable/border_ed"
+        android:inputType="number" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5sp"
+        android:textSize="16sp"
+        android:text="Địa chỉ giao hàng(*)"/>
+    <EditText
+        android:id="@+id/edtAdress"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Địa chỉ giao hàng..."
+        android:autofillHints="Tên..."
+        android:layout_margin="5sp"
+        android:padding="8sp"
+        android:background="@drawable/border_ed"
+        android:inputType="text"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+        <Button
+            android:id="@+id/btnHuyD"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:text="HỦY"
+            android:layout_margin="5sp"
+            android:background="@drawable/border_btnhuy"
+            />
+        <Button
+            android:id="@+id/btnOrder"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:text="Đặt hàng"
+            android:layout_margin="5sp"
+            android:background="@drawable/border_btn"/>
+    </LinearLayout>
+</LinearLayout>

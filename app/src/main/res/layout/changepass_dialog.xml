@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/borderdialog">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:textSize="16sp"
+        android:text="Mật khẩu cũ(*)"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Mật khẩu cũ..."
+        android:layout_margin="10sp"
+        android:padding="8sp"
+        android:background="@drawable/border_ed"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:textSize="16sp"
+        android:text="Mật khẩu mới(*)"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Mật khẩu mới..."
+        android:layout_margin="10sp"
+        android:padding="8sp"
+        android:background="@drawable/border_ed"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10sp"
+        android:textSize="16sp"
+        android:text="Nhập lại mật khẩu(*)"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Nhập lại mật khẩu..."
+        android:layout_margin="10sp"
+        android:padding="8sp"
+        android:background="@drawable/border_ed"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:layout_margin="10sp">
+        <Button
+            android:id="@+id/btnHuyM"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:text="HỦY"
+            android:layout_margin="5sp"
+            android:background="@drawable/border_btnhuy"/>
+        <Button
+            android:id="@+id/btnDoi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:text="Đổi"
+            android:layout_margin="5sp"
+            android:background="@drawable/border_btn"/>
+    </LinearLayout>
+</LinearLayout>
