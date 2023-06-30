@@ -15,6 +15,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.SearchView;
 
 import com.example.orderfood.R;
 import com.example.orderfood.allAdapter.SlideAdapter;
@@ -41,6 +42,7 @@ public class HomeFragment extends Fragment {
     ArrayList<FoodModel> modelArrayListSlide;
     ArrayList<FoodModel> foodModelArrayList;
     Timer mTimer;
+    SearchView SearchFood;
     RecyclerView RecyHome;
     public HomeFragment() {
         // Required empty public constructor
@@ -68,6 +70,7 @@ public class HomeFragment extends Fragment {
         VpSlide=view.findViewById(R.id.VpSlide);
         CrSlide=view.findViewById(R.id.CrSlide);
         RecyHome=view.findViewById(R.id.RecyHome);
+        SearchFood=view.findViewById(R.id.SearchFood);
         GridLayoutManager manager=new GridLayoutManager(getActivity(),2,RecyclerView.VERTICAL,false);
         RecyHome.setLayoutManager(manager);
         getDataSlide();
@@ -77,6 +80,20 @@ public class HomeFragment extends Fragment {
         autoSlide();
         getDataFood();
         RecyHome.setAdapter(userHomeAdapter);
+        SearchFood.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                userHomeAdapter.getFilter().filter(s);
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+                userHomeAdapter.getFilter().filter(s);
+                return false;
+            }
+        });
+
     }
 
     private void getDataFood() {

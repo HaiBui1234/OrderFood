@@ -110,6 +110,7 @@
         android:layout_margin="5sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:maxHeight="90dp"
         android:textSize="18sp"
         android:text="thom ngon tu mõm mgot tu nuoc cat khong can phai lo lo"/>
 </LinearLayout>

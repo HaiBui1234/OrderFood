@@ -6,6 +6,7 @@
     android:orientation="vertical"
     tools:context=".allFragment.HomeFragment">
     <SearchView
+        android:id="@+id/SearchFood"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_margin="4sp"

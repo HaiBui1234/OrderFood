@@ -7,6 +7,8 @@ import android.graphics.Paint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -21,15 +23,17 @@ import com.example.orderfood.allModel.FoodModel;
 
 import java.util.ArrayList;
 
-public class UserHomeAdapter extends RecyclerView.Adapter<UserHomeAdapter.ViewHodelUser> {
+public class UserHomeAdapter extends RecyclerView.Adapter<UserHomeAdapter.ViewHodelUser> implements Filterable {
     Context mContext;
     ArrayList<FoodModel> foodModelArrayList;
+    ArrayList<FoodModel> foodModelArrayListOld;
 
     public UserHomeAdapter(Context mContext) {
         this.mContext = mContext;
     }
     public void setData(ArrayList<FoodModel> foodModelArrayList){
         this.foodModelArrayList=foodModelArrayList;
+        this.foodModelArrayListOld=foodModelArrayList;
         notifyDataSetChanged();
     }
     @NonNull
@@ -69,6 +73,36 @@ public class UserHomeAdapter extends RecyclerView.Adapter<UserHomeAdapter.ViewHo
             return 0;
         }
        return foodModelArrayList.size();
+    }
+
+    @Override
+    public Filter getFilter() {
+        return new Filter() {
+            @Override
+            protected FilterResults performFiltering(CharSequence charSequence) {
+                String Search=charSequence.toString();
+                if (Search.isEmpty()){
+                    foodModelArrayList=foodModelArrayListOld;
+                }else {
+                    ArrayList<FoodModel> foodModels=new ArrayList<>();
+                    for (FoodModel model:foodModelArrayListOld) {
+                        if (model.getNameFood().toLowerCase().contains(Search.toLowerCase())){
+                            foodModels.add(model);
+                        }
+                    }
+                    foodModelArrayList=foodModels;
+                }
+                FilterResults results =new FilterResults();
+                results.values=foodModelArrayList;
+                return results;
+            }
+
+            @Override
+            protected void publishResults(CharSequence charSequence, FilterResults filterResults) {
+                foodModelArrayList= (ArrayList<FoodModel>) filterResults.values;
+                notifyDataSetChanged();
+            }
+        };
     }
 
     public static class ViewHodelUser extends RecyclerView.ViewHolder {
